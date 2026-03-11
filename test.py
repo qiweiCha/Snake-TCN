@@ -116,7 +116,7 @@ if __name__ == '__main__':
     logging.info(f'Using device {device}')
 
     torch.cuda.empty_cache() 
-    net = VSS_Net_SDK_TCN()
+    net = snake_tcn()
     net = nn.DataParallel(net, device_ids=[0])
     net.to(device=device)
 
