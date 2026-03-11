@@ -251,8 +251,8 @@ if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     logging.info(f'Using device {device}')
 
-    net = VSS_Net_SDK_TCN()
-    model_name='VSS_Net_SDK_TCN'
+    net = snake_tcn()
+    model_name='snake_tcn'
 
     net = nn.DataParallel(net, device_ids=[0])
     net = net.to(device)
